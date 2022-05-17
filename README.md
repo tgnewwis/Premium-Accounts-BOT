@@ -4,8 +4,6 @@ An advance telegram giveaway bot based on pyrogram with mongo database.powered b
 
 ## 👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma
 
-[![Mafia]("https://telegra.ph/file/03361563046fecdfbf9d9.jpg")](https://t.me/MafiaPremiumAccBot?start=1467358214)
-
 ## Features 🔥
 
 - Force Join.
