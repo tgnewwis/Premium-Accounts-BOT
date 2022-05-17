@@ -1,5 +1,5 @@
-<h1 style="text-align: center;">Mafia Giveaway Bot</h1>
+#                                                  Mafia Giveaway Bot
 
-<p style="text-align: center;">An advance telegram giveaway bot based on pyrogram with mongo database.powered by mafia.</p>
+####                  An advance telegram giveaway bot based on pyrogram with mongo database.powered by mafia.
 
 <h2>👨‍💻Dᴇᴠᴇʟᴏᴘᴇʀ : @supunma</h2>
