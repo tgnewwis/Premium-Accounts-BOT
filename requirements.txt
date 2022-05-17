@@ -1,0 +1,10 @@
+pyrogram==1.4.16
+TgCrypto
+python-dotenv
+pymongo[srv]
+dnspython
+aiohttp
+uvloop
+pyromod
+psutil
+pytz
