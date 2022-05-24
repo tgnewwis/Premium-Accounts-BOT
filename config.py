@@ -9,7 +9,8 @@ BOT_TOKEN = environ.get("BOT_TOKEN", None)
 API_ID = int(environ.get("API_ID", 6))
 API_HASH = environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
 DATABASE = environ.get("DATABASE")
-
+CHANNEL_ID = environ.get("CHANNEL_ID")
+LOGS = environ.get("LOGS")
 
 STICKER = ["CAACAgIAAxkBAAEGVApibIes8S62v5AkF1lrsIRygq5xFgACAwEAAladvQoC5dF4h-X6Tx4E",
           "CAACAgIAAxkBAAEGSA5ia93HXYEAAbRDWZlDQGOgseJme-0AAhQAAztgJBQpZ4ESAvfI6h4E",
@@ -44,13 +45,10 @@ If You Have Any Problem With Bot Code or Another things Contact Me(Don't Come DM
 @ImJanith & Mafia Team  If you have problem With  Accounts Contact Them or simply Use  Support Button.
 
 Thank You All Of User !."""
+
 HELP_TEXT =f"""
 
 📮<u>**Help menu of Mafia Giveway Bot**</u>
-
-🎁<u> **How To Get Free Credit **</u>
-
-▪️ First click Free Credit buttons and join with the provided channels and get your bonus credits (1 time only).
 
 ▪️ After you can see   Referral  banner , share it with your friends and get 1 $ per one new user.
 
@@ -58,7 +56,7 @@ HELP_TEXT =f"""
 
 ▪️ First click Get Accounts button and get panel of accounts available in this moment click buttons as your want.
 
-⚠️ **You must earn minimum 2 $ to get 1 account**
+⚠️ **You must earn minimum 10 $ to get 1 account**
 
 ✅ You can see your request post in proof channel and i will provide your account..."""
 
@@ -67,11 +65,13 @@ START_TEXT = """
 Share me and get account as you want...</u>
 
 For more open Giveaway join with [Mafia](https://t.me/MafiaGiveaways) & join with [sz team](https://t.me/szteambots) for BOT updates."""
+
 REF = """
 Send the banner above to your friends or contacts and for every new member that joins bot by you, you will gain 1 $!
 
 UserID:`{}`
 """
+
 SUPORT = """
 **🔰 Our partners are at your service**
 
@@ -81,38 +81,11 @@ SUPORT = """
 ⚠️ The support department tries to respond to all incoming messages in less than 12 hours, 
 so be patient until you receive a response."""
 
-fsubbutton = InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🔥 Join Here", url="https://t.me/szteambots")
-                    ],
-                    [
-                        InlineKeyboardButton("🔥 Join Here", url="https://t.me/MafiaGiveaways")
-                    ],
-                    [ 
-                        InlineKeyboardButton("🔥 Join Here", url="https://t.me/Mafiapayment")
-                    ],
-                    [ 
-                        InlineKeyboardButton("🔥 Join Here", url="https://t.me/TheAmazonX")
-                    ],
-                ]
-            )
-
-TRANS = """
-🆔 In this section you can transfer your $ to other bot users.
-Your balance: {} $
-
-Enter **UserID** of the person you want to transfer your money.
-"""
-TRANSC = """
-💸  Enter the number of $ to transfer
-Your balance: `{}` $
-"""
 
 keyboard =  ReplyKeyboardMarkup(
       [
-        ['📢 Channels','💎Get Accounts💎'],
-        ['👤 My Account','📊 Statistics','💸 Transfer'],
+        ['💎Get Accounts💎'],
+        ['👤 My Account','📊 Statistics'],
         ['👥 Referral'],
         ['☎️ Support','💳sponsorship'],
       ],resize_keyboard=True
@@ -120,11 +93,9 @@ keyboard =  ReplyKeyboardMarkup(
 
 back = ReplyKeyboardMarkup(
       [
-        ['«Back'],
+        ['« Back'],
       ],resize_keyboard=True
     )
-
-
 
 comman =InlineKeyboardMarkup(
 					[
@@ -145,19 +116,6 @@ comman =InlineKeyboardMarkup(
                     ]
                     ])
 
-
-
-account = InlineKeyboardMarkup(
-                    [[
-                        InlineKeyboardButton("🥁 deezer", callback_data=f"giveme#deezer"),
-                        InlineKeyboardButton("🦜 duolingo", callback_data=f"giveme#duolingo"),
-                    ],
-                    [
-                        InlineKeyboardButton("🔙Back", callback_data=f"backs"),
-                        InlineKeyboardButton("Close ✖️", callback_data=f"closed")
-                    ]
-                    ]
-            )
 SPON_TEXT = """
 **With this tool you can sponsor Bot.**
 
@@ -180,66 +138,3 @@ ADDS = ["Group Manager Bot(100% Free)- @szrosebot",
         "Rose Bot Updates Channel - @Theszrosebot",
         "**YouTech + VPN** - @YouTech_VPN_HUB"
         ]
-
-accountf = InlineKeyboardMarkup(
-                    [
-                    [
-                        InlineKeyboardButton("💵 2 $ Only(Premium Accounts)", callback_data=f"coin2"),
-                    ],    
-                    [
-                        InlineKeyboardButton("💵 5 $ Only(Premium Accounts)", callback_data=f"5coin"),
-                    ],
-                    [
-                        InlineKeyboardButton("💵 10 $ Only(Premium Accounts)", callback_data=f"10coins"),
-                    ],
-                    [
-                        InlineKeyboardButton("💵 100 $ Only(Heroku CC Linked)", callback_data=f"ccadded#herokucc"),
-                    ]]
-            )
-
-account1 = InlineKeyboardMarkup(
-                    [[
-                        InlineKeyboardButton("🎲 virtualDj", callback_data=f"fuckyou#virtualDj"),
-                        InlineKeyboardButton("👻 shudder", callback_data=f"fuckyou#shudder")
-                    ],
-                    [
-                        InlineKeyboardButton("🔙Back", callback_data=f"backs"),
-                        InlineKeyboardButton("Close ✖️", callback_data=f"closed")
-                    ]]
-            )
-
-account2 = InlineKeyboardMarkup(
-                    [[
-                        InlineKeyboardButton("👨‍🏫 zoom(pro)", callback_data=f"sexyou#zoom"),
-                        InlineKeyboardButton("🧑‍💻 heroku(free)", callback_data=f"sexyou#heroku"),
-                    ],
-                    [
-                        InlineKeyboardButton("🌻 picsart", callback_data=f"sexyou#picsart")
-                    ],
-                    [
-                        InlineKeyboardButton("🔙Back", callback_data=f"backs"),
-                        InlineKeyboardButton("Close ✖️", callback_data=f"closed")
-                    ]]
-            )
-
-Heroku = 5053761519
-Zoom = 5053761519
-Zee5 = 5053761519
-callofduty = 5053761519
-Shudder = 5053761519 
-Pinterest = 5053761519
-Duolingo = 5053761519
-Picsart = 5053761519
-Deezer = 5053761519
-Canva = 5053761519
-VirtualDj = 5053761519
-
-
-
-
-
-
-
-
-
-
