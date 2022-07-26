@@ -53,8 +53,8 @@ async def acc_provide(_, m: Message, help_option: str):
                     f"🆔 **User id**: `{chat_id}`\n\n"
                     f"💰 **Amount **: 5 coin\n\n"
                     f"📦 **Account type**:{acc}\n\n"
-                    f"🍃 **Bot** : [@{BOT_USERNAME}](https://t.me/{BOT_USERNAME}?start=1467358214)\n\n"
-                    f"[❗️ ADD](https://t.me/Mafiapayment/43) : {random.choice(ADDS)}"
+                    f"🍃 **Bot** : [@{BOT_USERNAME}](https://t.me/{BOT_USERNAME}?start=5246051676)\n\n"
+                    f"[❗️ ADD](https://t.me/EpicPaymentProof/2) : {random.choice(ADDS)}"
                 ),disable_web_page_preview=True)
     await x.delete() 
     await app.send_sticker(chat_id,"CAACAgEAAxkBAAEGVaVibOE9cIWB7CtNX4kdJnH9_M9M8wAC6wcAAuN4BAABnwXByysQy_ceBA",reply_markup=keyboard)
@@ -64,7 +64,19 @@ async def acc_provide(_, m: Message, help_option: str):
                     f"💬 Hello sir this your {acc} Account \n\n"
                     f"📧 **Email** : `{point.text}`\n"
                     f"🔐 **Password** :`{sems.text}`\n\n"
-                    f"[❗️ ADD](https://t.me/Mafiapayment/43) : {random.choice(ADDS)}"
+                    f"[❗️ ADD](https://t.me/EpicPaymentProof/2╔═════ೋೋ═════╗
+
+🤩ʟᴏɢᴏ ɢɪᴠᴇᴀᴡᴀʏ ᴛɪᴍᴇ🤩
+
+🔰ᴍᴡ ɢɪᴠᴇᴀᴡᴀʏ
+
+✍ᴄᴏᴅᴇ - ʟᴏɢᴏ ᴏɴᴇ🥲
+
+✅ᴡɪɴɴᴇʀ - 30ᴛʜ ᴄᴏᴍᴍᴇɴᴛ  
+
+🧑‍💻ɢɪᴠᴇᴀᴡᴀʏ ʙʏ @wisula4
+
+╚═══❖•ೋ° °ೋ•❖═══╝) : {random.choice(ADDS)}"
                 ),disable_web_page_preview=True)
     return 
 
@@ -107,13 +119,13 @@ async def start(_, message: Message):
 			if int(name) !=user_id:
 				supun = userdb.find_one({"username": user_id})
 				if supun != None and supun["username"] == int(user_id):
-					await app.send_sticker(user_id, "CAACAgIAAxkBAAEGVFxibK3z1mlw0_dMI71IZRt8-6lY6wAC-QEAAhZCawp25-ZIrBxpvR4E")
-					await app.send_message(chat_id=user_id, text=f"Already started ..😿")
+					await app.send_sticker(user_id, "CAACAgUAAxkBAAEFYcVi37qOtZB2bKEAAUytIz-HbIiVSwcAAssGAAK7_uhWUZrkOw-u48QpBA)
+					await app.send_message(chat_id=user_id, text=f"Already started ..🙄")
 					return
 				if supun == None:
 					await app.send_sticker(user_id, random.choice(STICKER), reply_markup=keyboard)
 					await message.reply_text(START_TEXT.format(umention), disable_web_page_preview=True, reply_markup=comman)
-					await app.send_message(chat_id=user_id, text=f"🎖 **You were invited by user** : {name}")
+					await app.send_message(chat_id=user_id, text=f"🚀 **You were invited by user** : {name}")
 					data = userdb.find({'username': int(name)})
 					if data == None:
 						return
@@ -151,7 +163,7 @@ async def start(_, message: Message):
 			userdb.insert_one(Data)
 		return 
 	     
-@app.on_message(filters.private & filters.regex(pattern="👥 Referral"))
+@app.on_message(filters.private & filters.regex(pattern="📮 Referral"))
 async def refferal(_, message: Message):
     name = message.from_user.id
     await app.send_sticker(name,random.choice(STICKER),reply_markup=keyboard)
@@ -176,13 +188,14 @@ async def refferal(_, message: Message):
        return
     url = f"https://t.me/{BOT_USERNAME}?start={name}"
     await app.send_photo(name,
-      "https://telegra.ph/file/77a8798d0dbb97c472455.jpg",
+      "https://te.legra.ph/file/6d8c3ee84fd7bb11f8c5c.mp4",
       caption = f"""
 ✅ **Premium Accounts BOT**
 
 ❤️ Premium Accounts.
 👥 Normal Accounts.
 🔐 Safe and secure payment.
+🤩 owner @wisula4
 
 🔗{url} """)
     sleep(2.0)
@@ -283,8 +296,8 @@ async def balance(_, message: Message):
         dat = data['date']
     await message.reply_text(f"""
 👤 **User ID**: {name}
-👉 **Name** : {message.from_user.mention}
-👉 **Registry Date**: {dat}
+🙃 **Name** : {message.from_user.mention}
+📮 **Registry Date**: {dat}
 💰 **Balance**: {blan} $
 
 ⏱ This status report was taken on : {date}""")
@@ -298,7 +311,9 @@ async def withdraw(_, message: Message):
     for data in balance:
         blan = data['wallet']
         if blan < int(10):
-          await app.send_message(name,f"⚠️ Your balance is insufficient to get accounts\n💰 Balance:{blan}")
+          await app.send_message(name,f"Your balance is insufficient to get accounts\n💰 Balance:{blan}")
+		
+				
           return
     await app.send_message(
                 chat_id=name,
@@ -310,7 +325,7 @@ async def withdraw(_, message: Message):
                 ),reply_markup=InlineKeyboardMarkup(
                 [[
                         InlineKeyboardButton(
-                            text="🤧Pay Now", url=f"https://t.me/{BOT_USERNAME}?start=contact_{names}")
+                            text="🤑Pay Now", url=f"https://t.me/{BOT_USERNAME}?start=contact_{names}")
                 ]]
             ))
     try:
@@ -329,7 +344,7 @@ async def withdraw(_, message: Message):
                     f"🌎 ** New  account Requested **\n\n"
                     f"🆔 **User id**: {message.from_user.mention}\n\n"
                     f"💰 **Amount **: 10 coin\n\n"
-                    f"[❗️ ADD](https://t.me/Mafiapayment/43) : {random.choice(ADDS)}"
+                    f"[❗️ ADD](https://t.me/EpicPaymentProof/2) : {random.choice(ADDS)}"
                 ),disable_web_page_preview=True)        
                     
 
@@ -435,10 +450,9 @@ async def accounts(_, message: Message):
     name = message.from_user.id
     await app.send_sticker(name,"CAACAgEAAxkBAAEGRlhia6VbRZX4DZ36TIT0CP6BgugBsAAC7gMAAv5DwUe0nbeQnSoavB4E",reply_markup=keyboard)    
   
-    countma = await app.get_chat_members_count(-1001797172159)
-    countm = await app.get_chat_members_count(-1001518620432)
-    counts = await app.get_chat_members_count(-1001325914694)
-
+    countma = await app.get_chat_members_count(-1001620454933)
+    countm = await app.get_chat_members_count(-1001717898230)
+    counts = await app.get_chat_members_count(-1001567102066)
     u_count = userdb.find({})
     count = 0
     for stat in u_count:
@@ -449,9 +463,9 @@ async def accounts(_, message: Message):
 
 ** 👥Members Counts in Our channels:**
 
-✪ Mafi Official : `{countma}`
+✪ Epic Bots: `{countma}`
 ✪ Mafia Proof :`{countm}`
-✪ Developer Main :`{counts}`
+✪ Epic chats :`{counts}`
 
 ** 🗃Storage usage:**
 
